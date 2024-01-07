@@ -34,7 +34,8 @@ option(ENABLE_SANITIZE_UNDEF "Enable undefined sanitizer" ON)
 
 option(ENABLE_LTO "Enable LTO/IPO" ON)
 
-option(USE_CPM "Whether to use CPM" ON)
+option(USE_CPM "Whether to use CPM" OFF)
+option(USE_CONAN "Whether to use CONAN" ON)
 
 # define variable. all used in subdirectories cmakefiles
 set(LIBRARY_NAME "Library")
@@ -69,6 +70,10 @@ if(USE_CPM)
     cpmaddpackage("gh:gabime/spdlog#v1.11.0")
     cpmaddpackage("gh:jarro2783/cxxopts#v3.1.1")
     cpmaddpackage("gh:catchorg/Catch2#v2.13.9")
+elseif(USE_CONAN)   
+    message(STATUS "Using CPM")
+    # generated path by commmand 
+    include(${CMAKE_BINARY_DIR}/conan_toolchain.cmake)
 else()
     message(STATUS "Using FetchContent. not CPM")
     # main idea

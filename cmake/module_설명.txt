@@ -5,3 +5,26 @@ FetchContent_Declare . FetchContent_MakeAvailable
 즉, 특정 git 혹은 github link 를 clone 하여 매칭시켜주는 기능이라고 생각하면 된다.
 단, 해당 repo 는 cmakelists.txt 가 있어야 한다.
 다시 말해 cmake project 여야 한다는 것이다.
+
+# Conan Package Manager 
+CPM 을 대신하여 사용하는 것.
+CPM 의 경우 target repo 가 cmake project 여야만 했다.
+
+해당 github repo 를 local repo 로 clone 하고
+이후 local 하게 해당 repo 를 compile 한다
+
+반면에 Conam 은 다른 접근 방법을 취한다.
+특정 컴파일러 os combination 을 위해서 precompiled 된 library 들이 존재 (Binary 형태의 데이터)한다.
+온라인 db 에 존재한다.
+그리고 그 pre compile 된 library 를 download 하는 과정으로 진행된다.
+
+따라서 local 로 clone 하고 compile 하는 과정을 생략할 수 있는 것이다.
+
+모든 compiler 조합에 대한 precompiled library 가 존재하는 것은 아니다
+Window - MSVC Compiler - Visual Studio 2019 조합은 존재하는데, Visual Studio 2022 버전은 없을 수 있다. db 에서 일일히 확인핸야 한다.
+Linux - GCC 
+
+
+참고 : 대부분의 precomplied binary 들은 release mode 로 build 된 녀석들일 것이다. debug X
+
+참고 : conan database https://conan.io/center

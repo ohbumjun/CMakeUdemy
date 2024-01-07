@@ -1,0 +1,12 @@
+D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/CMakeFiles/docs.dir
+D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/CMakeFiles/ALL_BUILD.dir
+D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/CMakeFiles/ZERO_CHECK.dir
+D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/json-build/CMakeFiles/ALL_BUILD.dir
+D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/fmt-build/CMakeFiles/fmt.dir
+D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/fmt-build/CMakeFiles/ALL_BUILD.dir
+D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/spdlog-build/CMakeFiles/spdlog.dir
+D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/spdlog-build/CMakeFiles/ALL_BUILD.dir
+D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-build/CMakeFiles/ALL_BUILD.dir
+D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/catch2-build/CMakeFiles/ALL_BUILD.dir
+D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/src/my_lib/CMakeFiles/Library.dir
+D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/app/CMakeFiles/Executable.dir
