@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-11" cr libLibrary.a CMakeFiles/Library.dir/my_lib.cc.o
-"/usr/bin/gcc-ranlib-11" libLibrary.a

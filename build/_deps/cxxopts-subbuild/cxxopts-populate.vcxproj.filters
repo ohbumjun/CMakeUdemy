@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-subbuild\CMakeFiles\d55902401b650e2408c10e5e81674d9f\cxxopts-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-subbuild\CMakeFiles\d55902401b650e2408c10e5e81674d9f\cxxopts-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-subbuild\CMakeFiles\d55902401b650e2408c10e5e81674d9f\cxxopts-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-subbuild\CMakeFiles\d55902401b650e2408c10e5e81674d9f\cxxopts-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-subbuild\CMakeFiles\d55902401b650e2408c10e5e81674d9f\cxxopts-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-subbuild\CMakeFiles\d55902401b650e2408c10e5e81674d9f\cxxopts-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-subbuild\CMakeFiles\d55902401b650e2408c10e5e81674d9f\cxxopts-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-subbuild\CMakeFiles\d55902401b650e2408c10e5e81674d9f\cxxopts-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-subbuild\CMakeFiles\91b489f9ce9a6e4110cf9aa44631a284\cxxopts-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-subbuild\CMakeFiles\9a0a35c26d57a316fa326cf029cbe992\cxxopts-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-subbuild\CMakeFiles\cxxopts-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{17037134-2AF5-3E4D-9264-87BA6DA2FF1E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -34,6 +34,7 @@ option(ENABLE_SANITIZE_UNDEF "Enable undefined sanitizer" ON)
 
 option(ENABLE_LTO "Enable LTO/IPO" ON)
 
+option(USE_CPM "Whether to use CPM" ON)
 
 # define variable. all used in subdirectories cmakefiles
 set(LIBRARY_NAME "Library")
@@ -60,54 +61,66 @@ endif()
 # build in cmake modules
 include(FetchContent)
 
+if(USE_CPM)
+    message(STATUS "Using CPM")
+    include(CPM)
+    cpmaddpackage("gh:nlohmann/json#v3.11.2")
+    cpmaddpackage("gh:fmtlib/fmt#9.1.0")
+    cpmaddpackage("gh:gabime/spdlog#v1.11.0")
+    cpmaddpackage("gh:jarro2783/cxxopts#v3.1.1")
+    cpmaddpackage("gh:catchorg/Catch2#v2.13.9")
+else()
+    message(STATUS "Using FetchContent. not CPM")
+    # main idea
+    # - declare which github repository to use -> be cloned to build directory
+    # - GIT_REPOSITORY needs to be cmake project
+    FetchContent_Declare(
+        # defined in other github repo cmakelist.txt as project name
+        # ex) project(CPPProjectCMake VERSION 1.0.0 LANGUAGES C CXX)
+        nlohmann_json
+        GIT_REPOSITORY https://github.com/nlohmann/json.git
+        # which version
+        GIT_TAG v3.11.2
+        # would not clone recursively
+        GIT_SHALLOW TRUE
+        )
 
-# main idea
-# - declare which github repository to use -> be cloned to build directory
-# - GIT_REPOSITORY needs to be cmake project
-#FetchContent_Declare(
-#    # defined in other github repo cmakelist.txt as project name
-#    # ex) project(CPPProjectCMake VERSION 1.0.0 LANGUAGES C CXX)
-#    nlohmann_json
-#    GIT_REPOSITORY https://github.com/nlohmann/json.git
-#    # which version
-#    GIT_TAG v3.11.2
-#    # would not clone recursively
-#    GIT_SHALLOW TRUE
-#    )
+    FetchContent_Declare(
+        FMT
+        GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+        GIT_TAG v9.1.0
+        GIT_SHALLOW TRUE
+        )
 
-FetchContent_Declare(
-    FMT
-    GIT_REPOSITORY https://github.com/fmtlib/fmt.git
-    GIT_SHALLOW TRUE
+    FetchContent_Declare(
+        cxxopts
+        GIT_REPOSITORY https://github.com/jarro2783/cxxopts.git
+        GIT_TAG v3.1.1
+        GIT_SHALLOW TRUE
     )
 
-FetchContent_Declare(
-    cxxopts
-    GIT_REPOSITORY https://github.com/jarro2783/cxxopts.git
-    GIT_TAG v3.1.1
-    GIT_SHALLOW TRUE
-)
+    FetchContent_Declare(
+        Catch2
+        GIT_REPOSITORY https://github.com/catchorg/Catch2
+        GIT_TAG v2.13.9
+        GIT_SHALLOW TRUE
+    )
 
-FetchContent_Declare(
-    Catch2
-    GIT_REPOSITORY https://github.com/catchorg/Catch2
-    GIT_TAG v2.13.9
-    GIT_SHALLOW TRUE
-)
+    FetchContent_Declare(
+        spdlog
+        GIT_REPOSITORY https://github.com/gabime/spdlog
+        GIT_TAG v1.11.0
+        GIT_SHALLOW TRUE)
 
-FetchContent_Declare(
-    spdlog
-    GIT_REPOSITORY https://github.com/gabime/spdlog
-    GIT_TAG v1.11.0
-    GIT_SHALLOW TRUE)
+    # load library into our cmake project
+    # then can be used
+    FetchContent_MakeAvailable(nlohmann_json)
+    FetchContent_MakeAvailable(FMT)
+    FetchContent_MakeAvailable(cxxopts)
+    FetchContent_MakeAvailable(Catch2)
+    FetchContent_MakeAvailable(spdlog)
+endif()
 
-# load library into our cmake project
-# then can be used
-# FetchContent_MakeAvailable(nlohmann_json)
-FetchContent_MakeAvailable(FMT)
-FetchContent_MakeAvailable(cxxopts)
-FetchContent_MakeAvailable(Catch2)
-FetchContent_MakeAvailable(spdlog)
 
 # if not cmake project ? stick to AddGitSubmodule function
 # then define own library target 

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\app\CMakeFiles\_CMakeLTOTest-CXX\bin\CMakeFiles\2cd147ad23255c339e5d183f85193331\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0F5B6665-4F25-3A16-9121-F23440A9BA9B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

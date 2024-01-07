@@ -1,0 +1,10 @@
+^D:\CODING\CODINGSTUDYSTUFF\GAMESTUDY\CMAKEUDEMY\BUILD\_DEPS\CXXOPTS-SUBBUILD\CMAKEFILES\9A0A35C26D57A316FA326CF029CBE992\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild -BD:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
