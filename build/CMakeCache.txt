@@ -340,8 +340,20 @@ DOXYGEN_DOT_EXECUTABLE:FILEPATH=/usr/bin/dot
 //Doxygen documentation generation tool (http://www.doxygen.org)
 DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
 
+//Enable address sanitizer
+ENABLE_SANITIZE_ADDR:BOOL=ON
+
+//Enable undefined sanitizer
+ENABLE_SANITIZE_UNDEF:BOOL=ON
+
 //Enable Unit Testing Build
 ENABLE_TESTING:BOOL=OFF
+
+//Enable to add warnings to a target.
+ENABLE_WARNINGS:BOOL=ON
+
+//Enable to treat warnings as errors.
+ENABLE_WARNINGS_AS_ERRORS:BOOL=OFF
 
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps

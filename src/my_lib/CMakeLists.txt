@@ -14,6 +14,15 @@ add_library(${LIBRARY_NAME} STATIC
     ${LIBRARY_SOURCES} 
     ${LIBRARY_HEADERS})
 
+    
+if (ENABLE_WARNINGS)
+target_set_warnings(
+    ${LIBRARY_NAME}
+    ON
+    OFF
+)
+endif()
+
 # where to find header files
 # cpp file can include header files from "./~~"
 target_include_directories(${LIBRARY_NAME} PUBLIC 

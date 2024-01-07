@@ -16,3 +16,20 @@ target_link_libraries(B Public spdLog)
 > C 에서 spdLog 를 사용할 수 없다.. B 가 spdLog 를 pubilc API 의 일부로 사용하지 않기 때문이다. 
 > spdLog 는 B 의 private api 에서만 사용된다.
 target_link_libraries(C Public B)
+
+> Configure 과 Generate 의 차이
+Configure 는 CMake 를 initialize 하고 build 환경을 구성한다.
+이때 project source code 와 cmakelist.txt 를 참고하여
+변수 세팅 옵션 등을 지정한다.
+
+이 과정 동안 required tool, library , compiler flag 등을 체크하여
+build system file 들을 만들어낸다 (ex MakeFile, Visual Studio Project) 
+
+또한 CMakeCache.txt 를 만들어내는 데, build 과정 중에
+config setting 및 cached variable 들을 저장하는 파일이다.
+
+Ganerate 은 실제 build file (ex. Make File, IDE Project file) 들을 만들어낸다.
+Configurte 단계에서 지정해준 config 를 참조해서 만든다.
+
+정리 :  cofigure 는 project 를 분석하여 variable option 등을 지정하고 cmakeCache.txt 를 만든다.
+        반면 generate 단계는 config 를 이용하여 실제 build system 을 만들어낸다.

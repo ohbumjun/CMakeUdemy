@@ -24,6 +24,13 @@ set(CMAKE_CXX_EXTENSIONS        OFF)
 # can pass variable to set 'COMPILE_EXECUTABLE' value in command line
 # ex) cmake .. -DCOMPILE_EXECUTABLE=ON
 option(COMPILE_EXECUTABLE "Whether to compile the executable" ON)
+option(ENABLE_WARNINGS "Enable to add warnings to a target." ON) # always should be on 
+# if single one warning occurs, compilation will fail
+option(ENABLE_WARNINGS_AS_ERRORS "Enable to treat warnings as errors." OFF)
+
+# sanitizer : runtime tool that helps to find memory corruption, memory leak etc.
+option(ENABLE_SANITIZE_ADDR "Enable address sanitizer" ON)
+option(ENABLE_SANITIZE_UNDEF "Enable undefined sanitizer" ON)
 
 # define variable. all used in subdirectories cmakefiles
 set(LIBRARY_NAME "Library")
@@ -34,9 +41,18 @@ set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
 # reference : already predefined cmake modules exist in my cmake version
 include(AddGitSubmodule) 
 include(Docs) 
+if(ENABLE_WARNINGS)
+    include(Warnings)
+endif()
+
+if(ENABLE_SANITIZE_ADDR OR ENABLE_SANITIZE_UNDEF)
+    include(Sanitizer)
+    add_sanitizer_flags()
+endif()
 
 # build in cmake modules
 include(FetchContent)
+
 
 # main idea
 # - declare which github repository to use -> be cloned to build directory
@@ -106,6 +122,7 @@ else ()
     # ex) cmake .. -> '..' means configure
     message("Without exe. compiling")
 endif()
+
 
 # which generator should be used
 # generator is the build system that cmake uses under the hood

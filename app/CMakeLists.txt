@@ -15,3 +15,11 @@ target_link_libraries(${EXECUTABLE_NAME} PUBLIC
 ${LIBRARY_NAME}
 nlohmann_json
 )
+
+if (ENABLE_WARNINGS)
+    target_set_warnings(
+        ${EXECUTABLE_NAME}
+        ON
+        OFF
+    )
+endif()

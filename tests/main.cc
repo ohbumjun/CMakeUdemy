@@ -7,6 +7,7 @@
 
 #include "my_lib.h"
 
+// testname, short name
 TEST_CASE("Factorials are computed", "[factorial]")
 {
     REQUIRE(factorial(1) == 1);

@@ -6,5 +6,5 @@ CXX_DEFINES = -DSPDLOG_COMPILED_LIB
 
 CXX_INCLUDES = -I/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/spdlog-src/include
 
-CXX_FLAGS = -O3 -DNDEBUG -std=c++17
+CXX_FLAGS = -O3 -DNDEBUG -fno-omit-frame-pointer -fsanitize=address -fsanitize=undefined -std=c++17
 

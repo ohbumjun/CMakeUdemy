@@ -29,6 +29,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/spdlog-src/cmake/utils.cmake"
   "../cmake/AddGitSubmodule.cmake"
   "../cmake/Docs.cmake"
+  "../cmake/Sanitizer.cmake"
+  "../cmake/Warnings.cmake"
   "../configured/CMakeLists.txt"
   "../configured/config.hpp.in"
   "../external/CMakeLists.txt"
