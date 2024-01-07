@@ -32,6 +32,9 @@ option(ENABLE_WARNINGS_AS_ERRORS "Enable to treat warnings as errors." OFF)
 option(ENABLE_SANITIZE_ADDR "Enable address sanitizer" ON)
 option(ENABLE_SANITIZE_UNDEF "Enable undefined sanitizer" ON)
 
+option(ENABLE_LTO "Enable LTO/IPO" ON)
+
+
 # define variable. all used in subdirectories cmakefiles
 set(LIBRARY_NAME "Library")
 set(EXECUTABLE_NAME "Executable")
@@ -43,6 +46,10 @@ include(AddGitSubmodule)
 include(Docs) 
 if(ENABLE_WARNINGS)
     include(Warnings)
+endif()
+
+if(ENABLE_LTO)
+    include(LTO)
 endif()
 
 if(ENABLE_SANITIZE_ADDR OR ENABLE_SANITIZE_UNDEF)
