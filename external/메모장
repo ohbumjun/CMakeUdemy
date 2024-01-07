@@ -1,0 +1,4 @@
+만약 어떤 Git Project 를 사용하고 싶은데,  cmake 프로젝트가 아닌 경우에는..?
+
+CMake Udemy 강좌 참고
+- ExternalLibraries: Git Submodules 18:55 참고
