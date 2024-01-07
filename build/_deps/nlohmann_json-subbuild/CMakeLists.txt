@@ -21,7 +21,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(nlohmann_json-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/nlohmann/json.git" "GIT_TAG" "v3.11.3" "GIT_SHALLOW" "TRUE"
+                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/nlohmann/json.git" "GIT_TAG" "v3.11.2" "GIT_SHALLOW" "TRUE"
                     SOURCE_DIR          "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/nlohmann_json-src"
                     BINARY_DIR          "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/nlohmann_json-build"
                     CONFIGURE_COMMAND   ""

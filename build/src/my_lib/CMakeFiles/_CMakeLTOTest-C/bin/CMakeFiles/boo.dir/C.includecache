@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/src/my_lib/CMakeFiles/_CMakeLTOTest-C/src/main.c
+

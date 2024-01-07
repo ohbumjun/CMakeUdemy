@@ -6,5 +6,5 @@ CXX_DEFINES = -DSPDLOG_COMPILED_LIB
 
 CXX_INCLUDES = -I/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/src/my_lib/. -I/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/configured_files/include -I/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-src/include -I/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/nlohmann_json-src/include -I/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/fmt-src/include -I/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/spdlog-src/include
 
-CXX_FLAGS = -O3 -DNDEBUG -fno-omit-frame-pointer -fsanitize=address -fsanitize=undefined -std=c++17
+CXX_FLAGS = -O3 -DNDEBUG -flto -fno-fat-lto-objects -fno-omit-frame-pointer -fsanitize=address -fsanitize=undefined -std=c++17
 

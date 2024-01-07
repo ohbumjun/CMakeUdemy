@@ -1,1 +1,1 @@
-/usr/bin/c++ -O3 -DNDEBUG -fno-omit-frame-pointer -fsanitize=address -fsanitize=undefined CMakeFiles/Executable.dir/main.cc.o -o Executable  ../src/my_lib/libLibrary.a ../_deps/fmt-build/libfmt.a ../_deps/spdlog-build/libspdlog.a 
+/usr/bin/c++ -O3 -DNDEBUG -flto -fno-fat-lto-objects -fno-omit-frame-pointer -fsanitize=address -fsanitize=undefined CMakeFiles/Executable.dir/main.cc.o -o Executable  ../src/my_lib/libLibrary.a ../_deps/fmt-build/libfmt.a ../_deps/spdlog-build/libspdlog.a 

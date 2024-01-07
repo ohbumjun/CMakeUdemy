@@ -64,16 +64,16 @@ include(FetchContent)
 # main idea
 # - declare which github repository to use -> be cloned to build directory
 # - GIT_REPOSITORY needs to be cmake project
-FetchContent_Declare(
-    # defined in other github repo cmakelist.txt as project name
-    # ex) project(CPPProjectCMake VERSION 1.0.0 LANGUAGES C CXX)
-    nlohmann_json
-    GIT_REPOSITORY https://github.com/nlohmann/json.git
-    # which version
-    GIT_TAG v3.11.3
-    # would not clone recursively
-    GIT_SHALLOW TRUE
-    )
+#FetchContent_Declare(
+#    # defined in other github repo cmakelist.txt as project name
+#    # ex) project(CPPProjectCMake VERSION 1.0.0 LANGUAGES C CXX)
+#    nlohmann_json
+#    GIT_REPOSITORY https://github.com/nlohmann/json.git
+#    # which version
+#    GIT_TAG v3.11.2
+#    # would not clone recursively
+#    GIT_SHALLOW TRUE
+#    )
 
 FetchContent_Declare(
     FMT
@@ -103,7 +103,7 @@ FetchContent_Declare(
 
 # load library into our cmake project
 # then can be used
-FetchContent_MakeAvailable(nlohmann_json)
+# FetchContent_MakeAvailable(nlohmann_json)
 FetchContent_MakeAvailable(FMT)
 FetchContent_MakeAvailable(cxxopts)
 FetchContent_MakeAvailable(Catch2)

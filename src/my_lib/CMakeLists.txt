@@ -23,6 +23,14 @@ target_set_warnings(
 )
 endif()
 
+
+if (ENABLE_LTO)
+    target_enable_lto(
+        ${LIBRARY_NAME}
+        ${ENABLE_LTO}
+    )
+endif()
+
 # where to find header files
 # cpp file can include header files from "./~~"
 target_include_directories(${LIBRARY_NAME} PUBLIC 
