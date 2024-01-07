@@ -15,6 +15,7 @@ if (DOXYGEN_FOUND)
         # place where 'doxygen command' will be run to generate documentation
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/docs
         COMMENT "Generating API documentation with Doxygen" VERBATIM)
-
         # ex) above command same as == cd docs -> doxygen -> create html files in docs/html
+    
+    message("Execute custom target 'docs'")
 endif()

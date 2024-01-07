@@ -91,11 +91,14 @@ FetchContent_MakeAvailable(spdlog)
 # ex) call function in cmake module file
 #     - add_git_submodule(external/json)
 
+option(ENABLE_TESTING "Enable Unit Testing Build" OFF)
+
 # search for other CMakeLists.txt files in subdirectories
 add_subdirectory(src) # library
 add_subdirectory(configured)
 add_subdirectory(external)
 add_subdirectory(app)
+add_subdirectory(tests) # other executable
 
 if (COMPILE_EXECUTABLE)
 else ()

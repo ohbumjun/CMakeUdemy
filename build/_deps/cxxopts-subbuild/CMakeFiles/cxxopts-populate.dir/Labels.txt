@@ -1,0 +1,14 @@
+# Target labels
+ cxxopts-populate
+# Source files and their labels
+/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/CMakeFiles/cxxopts-populate
+/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/CMakeFiles/cxxopts-populate.rule
+/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/CMakeFiles/cxxopts-populate-complete.rule
+/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-build.rule
+/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-configure.rule
+/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-download.rule
+/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-install.rule
+/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-mkdir.rule
+/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-patch.rule
+/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-test.rule
+/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-update.rule

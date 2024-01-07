@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/CMakeFiles/cxxopts-populate"
+		},
+		{
+			"file" : "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/CMakeFiles/cxxopts-populate.rule"
+		},
+		{
+			"file" : "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/CMakeFiles/cxxopts-populate-complete.rule"
+		},
+		{
+			"file" : "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-build.rule"
+		},
+		{
+			"file" : "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-configure.rule"
+		},
+		{
+			"file" : "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-download.rule"
+		},
+		{
+			"file" : "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-install.rule"
+		},
+		{
+			"file" : "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-mkdir.rule"
+		},
+		{
+			"file" : "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-patch.rule"
+		},
+		{
+			"file" : "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-test.rule"
+		},
+		{
+			"file" : "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-subbuild/cxxopts-populate-prefix/src/cxxopts-populate-stamp/cxxopts-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"cxxopts-populate"
+		],
+		"name" : "cxxopts-populate"
+	}
+}
