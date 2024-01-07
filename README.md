@@ -64,7 +64,7 @@ If you want to build a specific target, you can do so.
 
 ```bash
 cd build
-cmake --build . --target ExternalLibraries_Executable
+cmake --build . --target Executable
 ```
 
 The target *ExternalLibraries_Executable* is just an example of a possible target name.

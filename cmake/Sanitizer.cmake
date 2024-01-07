@@ -1,3 +1,9 @@
+# gcc document : https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html
+# ex)
+# /fsanitize=address : out of bound , use after free bugs
+# -fsanitize=thread  : a fast data race detector
+# tips : only enable sanitizer for debug build ! (not relaese build)
+
 function(add_sanitizer_flags)
     # non of flags active 
     if (NOT ENABLE_SANITIZE_ADDR AND NOT ENABLE_SANITIZE_UNDEF)
@@ -21,6 +27,7 @@ function(add_sanitizer_flags)
             add_compile_options("-fsanitize=undefined")
             add_link_options("-fsanitize=undefined")
         endif()
+    # Windows
     elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
         if(ENABLE_SANITIZE_ADDR)
             add_compile_options("/fsanitize=address")
