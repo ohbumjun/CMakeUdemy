@@ -14,23 +14,28 @@ add_library(${LIBRARY_NAME} STATIC
     ${LIBRARY_SOURCES} 
     ${LIBRARY_HEADERS})
 
-    
-if (ENABLE_WARNINGS)
-target_set_warnings(
-    ${LIBRARY_NAME}
-    ON
-    OFF
-)
-endif()
 
-
-if (ENABLE_LTO)
-    target_enable_lto(
+if(${ENABLE_WARNINGS})
+    target_set_warnings(
+        TARGET
         ${LIBRARY_NAME}
-        ${ENABLE_LTO}
-    )
+        ENABLE
+        ${ENABLE_WARNINGS}
+        AS_ERRORS
+        ${ENABLE_WARNINGS_AS_ERRORS})
 endif()
 
+if(${ENABLE_LTO})
+    target_enable_lto(
+        TARGET
+        ${LIBRARY_NAME}
+        ENABLE
+        ON)
+endif()
+
+if(${ENABLE_CLANG_TIDY})
+    add_clang_tidy_to_target(${LIBRARY_NAME})
+endif()
 # where to find header files
 # cpp file can include header files from "./~~"
 target_include_directories(${LIBRARY_NAME} PUBLIC 

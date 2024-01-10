@@ -14,7 +14,7 @@
     <CustomBuild Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Natvis Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\json-src\nlohmann_json.natvis" />
+    <Natvis Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_json.natvis" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

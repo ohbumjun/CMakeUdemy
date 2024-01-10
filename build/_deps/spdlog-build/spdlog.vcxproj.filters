@@ -19,7 +19,7 @@
     <ClCompile Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\src\cfg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\src\bundled_fmtlib_format.cpp">
+    <ClCompile Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\src\fmt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -144,12 +144,6 @@
     <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include\spdlog\details\thread_pool.h">
       <Filter>Header Files\spdlog\details</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include\spdlog\details\udp_client-windows.h">
-      <Filter>Header Files\spdlog\details</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include\spdlog\details\udp_client.h">
-      <Filter>Header Files\spdlog\details</Filter>
-    </ClInclude>
     <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include\spdlog\details\windows_include.h">
       <Filter>Header Files\spdlog\details</Filter>
     </ClInclude>
@@ -237,9 +231,6 @@
     <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include\spdlog\sinks\tcp_sink.h">
       <Filter>Header Files\spdlog\sinks</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include\spdlog\sinks\udp_sink.h">
-      <Filter>Header Files\spdlog\sinks</Filter>
-    </ClInclude>
     <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include\spdlog\sinks\win_eventlog_sink.h">
       <Filter>Header Files\spdlog\sinks</Filter>
     </ClInclude>
@@ -262,9 +253,6 @@
       <Filter>Header Files\spdlog\fmt</Filter>
     </ClInclude>
     <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include\spdlog\fmt\ostr.h">
-      <Filter>Header Files\spdlog\fmt</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include\spdlog\fmt\ranges.h">
       <Filter>Header Files\spdlog\fmt</Filter>
     </ClInclude>
     <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include\spdlog\fmt\xchar.h">

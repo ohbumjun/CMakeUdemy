@@ -30,6 +30,9 @@
     <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include\fmt\format-inl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include\fmt\locale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include\fmt\os.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -40,9 +43,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include\fmt\ranges.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include\fmt\std.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include\fmt\xchar.h">

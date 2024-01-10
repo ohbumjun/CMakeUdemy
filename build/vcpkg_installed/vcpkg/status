@@ -1,0 +1,60 @@
+Package: vcpkg-cmake-config
+Version: 2022-02-06
+Port-Version: 1
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c4df26879be8ce3f3a13d0cdbfae7b09d21a3c864a0642c6ec249c14ccb7d5f1
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2023-05-04
+Architecture: x64-windows
+Multi-Arch: same
+Abi: ef4ca89cdcf99c6052a9d62a0c8bdd7f4a0edb5bdbe81fa586ea286fe40818c6
+Status: install ok installed
+
+Package: catch2
+Version: 2.13.9
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a02dd7169bb4bfa9e064473868b64cd4c4758090b8d8aeac88f302309caabf1a
+Description: A modern, header-only test framework for unit testing.
+Status: install ok installed
+
+Package: cxxopts
+Version: 3.1.1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: f69064439ba8fb9bb26bd47484d4a67bd49e9e6f363ef5519c95050821c56dc2
+Description: This is a lightweight C++ option parser library, supporting the standard GNU style syntax for options
+Status: install ok installed
+
+Package: fmt
+Version: 10.2.1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: ce59d46026305d3bb27029f7c6e1ac975f2e82a3ac4686fa3e435470c81ac0cb
+Description: Formatting library for C++. It can be used as a safe alternative to printf or as a fast alternative to IOStreams.
+Status: install ok installed
+
+Package: nlohmann-json
+Version: 3.11.3
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 30baf2da3a1761d155bbad9d7ebc1ffb6ab11250621736af7cc6ea417b270a23
+Description: JSON for Modern C++
+Status: install ok installed
+
+Package: spdlog
+Version: 1.12.0
+Depends: fmt, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: af5f892ee70a8368b362d45c1479ec5e92803e3471f10b81aa0e3f8276f4ab2a
+Description: Very fast, header only, C++ logging library
+Status: install ok installed
+

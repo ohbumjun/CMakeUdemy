@@ -1,0 +1,1 @@
+. "/mnt/d/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/conanbuildenv-debug-x86_64.sh"

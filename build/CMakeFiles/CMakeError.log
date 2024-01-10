@@ -1,13 +1,14 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/CMakeFiles/CMakeScratch/TryCompile-oe8m90
+Change Dir: D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/CMakeFiles/CMakeScratch/TryCompile-lnbyzn
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_b32be.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && msbuild 버전 17.8.3+195e7f5a3(.NET Framework용)
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_17de0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && msbuild 버전 17.8.3+195e7f5a3(.NET Framework용)
 
+  The vcpkg manifest was disabled, but we found a manifest file in D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
   Microsoft (R) C/C++ 최적화 컴파일러 버전 19.38.33133(x64)
   Copyright (c) Microsoft Corporation. All rights reserved.
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b32be.dir\Debug\\" /Fd"cmTC_b32be.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-oe8m90\src.c"
+  cl /c /I"D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\external\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_17de0.dir\Debug\\" /Fd"cmTC_17de0.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-lnbyzn\src.c"
   src.c
-D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-oe8m90\src.c(1,10): error C1083: 포함 파일을 열 수 없습니다. 'pthread.h': No such file or directory [D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-oe8m90\cmTC_b32be.vcxproj]
+D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-lnbyzn\src.c(1,10): error C1083: 포함 파일을 열 수 없습니다. 'pthread.h': No such file or directory [D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-lnbyzn\cmTC_17de0.vcxproj]
 
 
 Source file was:
@@ -33,28 +34,30 @@ int main(void)
 
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/CMakeFiles/CMakeScratch/TryCompile-52edut
+Change Dir: D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/CMakeFiles/CMakeScratch/TryCompile-rpewul
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_58f08.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && msbuild 버전 17.8.3+195e7f5a3(.NET Framework용)
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_58298.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && msbuild 버전 17.8.3+195e7f5a3(.NET Framework용)
 
+  The vcpkg manifest was disabled, but we found a manifest file in D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
   Microsoft (R) C/C++ 최적화 컴파일러 버전 19.38.33133(x64)
   Copyright (c) Microsoft Corporation. All rights reserved.
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_58f08.dir\Debug\\" /Fd"cmTC_58f08.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-52edut\CheckFunctionExists.c"
+  cl /c /I"D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\external\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_58298.dir\Debug\\" /Fd"cmTC_58298.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-rpewul\CheckFunctionExists.c"
   CheckFunctionExists.c
-LINK : fatal error LNK1104: 'pthreads.lib' 파일을 열 수 없습니다. [D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-52edut\cmTC_58f08.vcxproj]
+LINK : fatal error LNK1104: 'pthreads.lib' 파일을 열 수 없습니다. [D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-rpewul\cmTC_58298.vcxproj]
 
 
 
 Determining if the function pthread_create exists in the pthread failed with the following output:
-Change Dir: D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/CMakeFiles/CMakeScratch/TryCompile-l4t89o
+Change Dir: D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/CMakeFiles/CMakeScratch/TryCompile-jipol7
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_a7480.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && msbuild 버전 17.8.3+195e7f5a3(.NET Framework용)
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_1dcb8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && msbuild 버전 17.8.3+195e7f5a3(.NET Framework용)
 
+  The vcpkg manifest was disabled, but we found a manifest file in D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
   Microsoft (R) C/C++ 최적화 컴파일러 버전 19.38.33133(x64)
   Copyright (c) Microsoft Corporation. All rights reserved.
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a7480.dir\Debug\\" /Fd"cmTC_a7480.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-l4t89o\CheckFunctionExists.c"
+  cl /c /I"D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\external\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1dcb8.dir\Debug\\" /Fd"cmTC_1dcb8.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-jipol7\CheckFunctionExists.c"
   CheckFunctionExists.c
-LINK : fatal error LNK1104: 'pthread.lib' 파일을 열 수 없습니다. [D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-l4t89o\cmTC_a7480.vcxproj]
+LINK : fatal error LNK1104: 'pthread.lib' 파일을 열 수 없습니다. [D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\CMakeFiles\CMakeScratch\TryCompile-jipol7\cmTC_1dcb8.vcxproj]
 
 
 

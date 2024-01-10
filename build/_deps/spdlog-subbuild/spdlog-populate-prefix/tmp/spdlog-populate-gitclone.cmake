@@ -41,12 +41,12 @@ endif()
 
 execute_process(
   COMMAND "C:/Program Files/Git/cmd/git.exe" 
-          checkout "v1.11.0" --
+          checkout "v1.9.2" --
   WORKING_DIRECTORY "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/spdlog-src"
   RESULT_VARIABLE error_code
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to checkout tag: 'v1.11.0'")
+  message(FATAL_ERROR "Failed to checkout tag: 'v1.9.2'")
 endif()
 
 set(init_submodules TRUE)

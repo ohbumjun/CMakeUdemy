@@ -3,6 +3,7 @@ C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeCheckCompilerFlagCommonPatt
 C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeParseArguments.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/CheckCXXCompilerFlag.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CheckSymbolExists.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/GNUInstallDirs.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/Internal/CheckCompilerFlag.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/Internal/CheckFlagCommonConfig.cmake

@@ -1,0 +1,45 @@
+>> 어떤 version 의 package 가 vcpkg 에서 지원하는지는 아래 사이트에서 검색하면 된다.
+https://vcpkg.io/en/packages 에서 찾기
+
+>> 동작 방식
+CMake 를 통해서 vcpkg 를 실행하게 되면 내가 명시한 package 들이
+/vcpkg/packages 라는 경로에 바이너리 형태로 컴파일되어서 들어오게 된다.
+
+>> dependencies
+
+vcpkg 의 철학은 다음과 같다.
+이전의 conan 혹은 cpm 같은 경우
+내가 사용하고자 하는 version 을 반드시 명시해줘야 하는
+상황이었다.
+
+vcpkg 는 minimium required version 만 명시해도 된다.
+만약 해당 version 이 잘 동작하지 않거나
+지원하지 않는다면
+
+알아서 new version 으로 update 해서 진행해줄 것이다.
+
+ex)  "name": "cxxopts",
+     "version>=": "3.1.1"
+
+>> overrides 
+
+단, 정말로 특정 version 을 사용하고자 한다면
+그때는 vcpkg.json 에 "overrides" 항목에 version 을
+넣어주면 된다.
+
+>> baseline 
+builtin-baseline 은 어떤 목적으로 존재하는지는
+잘 모르겠다. 우선 local 에서 가장 최신 commit 으로
+진행해도 되는 것으로 보인다.
+
+- initial baseline 을 추가하는 방법
+./vcpkg.exe x-update-baseline --add-initial-baseline
+
+- manifest 에 있는 baseline 을 update 하는 방법
+./vcpkg.exe x-update-baseline
+
+
+>> 정리
+1) Main Cmakelists.txt 에 vcpkg.cmake 경로 명시
+2) .json 파일 작성
+3) builtin-baseline... 세팅 ?

@@ -1,0 +1,19 @@
+https://github.com/franneck94/UdemyCmake
+
+VSCode 편의기능
+https://github.com/franneck94/VSCodeGuide/blob/master/usefulShortcuts.md
+
+# CMake Guild
+
+> fmt 는 A 의 public API 에서 사용될 수 있다.
+target_link_libraries(A Public fmt)
+
+> C 에서 fmt 를 사용할 수 있다. A 가 fmt 를 pubilc API 의 일부로 사용하기 때문이다.
+target_link_libraries(C Public A)
+
+target_link_libraries(B Public spdLog)
+
+> C 에서 spdLog 를 사용할 수 없다.. B 가 spdLog 를 pubilc API 의 일부로 사용하지 않기 때문이다. 
+> spdLog 는 B 의 private api 에서만 사용된다.
+target_link_libraries(C Public B)
+

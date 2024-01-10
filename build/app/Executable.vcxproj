@@ -24,6 +24,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{59D4D1D5-4665-356D-ABFE-FAED6C82BC2E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>Executable</ProjectName>
@@ -62,7 +63,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
@@ -91,10 +92,12 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-src/include" /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/json-src/include" /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/fmt-src/include" /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/spdlog-src/include" /fsanitize=address</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/vcpkg_installed/x64-windows/include" /fsanitize=address /w14242 /w14254 /w14287 /w14296 /w14311 /w44062 /w44242 /w14826 /w14905 /w14906 /w14263 /w14265 /w14640 /w14928</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
@@ -102,24 +105,38 @@
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>4289</TreatSpecificWarningsAsErrors>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;SPDLOG_COMPILED_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;FMT_SHARED;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;SPDLOG_COMPILED_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\json-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;FMT_SHARED;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\json-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/external/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/app/Debug/Executable.exe -installedDir D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/vcpkg_installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\src\my_lib\Debug\Library.lib;..\_deps\fmt-build\Debug\fmtd.lib;..\_deps\spdlog-build\Debug\spdlogd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\src\my_lib\Debug\Library.lib;..\vcpkg_installed\x64-windows\debug\lib\spdlogd.lib;..\vcpkg_installed\x64-windows\debug\lib\fmtd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -135,8 +152,10 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-src/include" /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/json-src/include" /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/fmt-src/include" /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/spdlog-src/include" /fsanitize=address</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/vcpkg_installed/x64-windows/include" /fsanitize=address /w14242 /w14254 /w14287 /w14296 /w14311 /w44062 /w44242 /w14826 /w14905 /w14906 /w14263 /w14265 /w14640 /w14928</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -144,26 +163,40 @@
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>4289</TreatSpecificWarningsAsErrors>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SPDLOG_COMPILED_LIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FMT_SHARED;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SPDLOG_COMPILED_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\json-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FMT_SHARED;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\json-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/external/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/app/Release/Executable.exe -installedDir D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/vcpkg_installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\src\my_lib\Release\Library.lib;..\_deps\fmt-build\Release\fmt.lib;..\_deps\spdlog-build\Release\spdlog.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\src\my_lib\Release\Library.lib;..\vcpkg_installed\x64-windows\lib\spdlog.lib;..\vcpkg_installed\x64-windows\lib\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -179,8 +212,10 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-src/include" /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/json-src/include" /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/fmt-src/include" /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/spdlog-src/include" /fsanitize=address</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/vcpkg_installed/x64-windows/include" /fsanitize=address /w14242 /w14254 /w14287 /w14296 /w14311 /w44062 /w44242 /w14826 /w14905 /w14906 /w14263 /w14265 /w14640 /w14928</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -188,26 +223,40 @@
       <Optimization>MinSpace</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>4289</TreatSpecificWarningsAsErrors>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SPDLOG_COMPILED_LIB;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FMT_SHARED;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SPDLOG_COMPILED_LIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\json-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FMT_SHARED;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\json-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/external/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/app/MinSizeRel/Executable.exe -installedDir D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/vcpkg_installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\src\my_lib\MinSizeRel\Library.lib;..\_deps\fmt-build\MinSizeRel\fmt.lib;..\_deps\spdlog-build\MinSizeRel\spdlog.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\src\my_lib\MinSizeRel\Library.lib;..\vcpkg_installed\x64-windows\lib\spdlog.lib;..\vcpkg_installed\x64-windows\lib\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -223,9 +272,11 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/cxxopts-src/include" /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/json-src/include" /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/fmt-src/include" /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/spdlog-src/include" /fsanitize=address</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/vcpkg_installed/x64-windows/include" /fsanitize=address /w14242 /w14254 /w14287 /w14296 /w14311 /w44062 /w44242 /w14826 /w14905 /w14906 /w14263 /w14265 /w14640 /w14928</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -233,24 +284,38 @@
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>4289</TreatSpecificWarningsAsErrors>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SPDLOG_COMPILED_LIB;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FMT_SHARED;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SPDLOG_COMPILED_LIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\json-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FMT_SHARED;SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\cxxopts-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\json-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-src\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\src\my_lib\.;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\configured_files\include;D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/external/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/app/RelWithDebInfo/Executable.exe -installedDir D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/vcpkg_installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\src\my_lib\RelWithDebInfo\Library.lib;..\_deps\fmt-build\RelWithDebInfo\fmt.lib;..\_deps\spdlog-build\RelWithDebInfo\spdlog.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\src\my_lib\RelWithDebInfo\Library.lib;..\vcpkg_installed\x64-windows\lib\spdlog.lib;..\vcpkg_installed\x64-windows\lib\fmt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -322,7 +387,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\app\main.cc" />
-    <Natvis Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\json-src\nlohmann_json.natvis">
+    <Natvis Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_json.natvis">
     </Natvis>
   </ItemGroup>
   <ItemGroup>
@@ -335,14 +400,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\src\my_lib\Library.vcxproj">
       <Project>{9BB46273-2E2D-3345-9361-FF392FDCE05F}</Project>
       <Name>Library</Name>
-    </ProjectReference>
-    <ProjectReference Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\fmt-build\fmt.vcxproj">
-      <Project>{93996BA7-3B94-3FF4-B433-1A5201249778}</Project>
-      <Name>fmt</Name>
-    </ProjectReference>
-    <ProjectReference Include="D:\Coding\CodingStudyStuff\gameStudy\CMakeUdemy\build\_deps\spdlog-build\spdlog.vcxproj">
-      <Project>{A294273D-C7F7-3BCA-BF5A-41051055E316}</Project>
-      <Name>spdlog</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

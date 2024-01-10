@@ -21,7 +21,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(fmt-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/fmtlib/fmt.git" "GIT_TAG" "9.1.0"
+                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/fmtlib/fmt.git" "GIT_TAG" "8.0.1"
                     SOURCE_DIR          "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/fmt-src"
                     BINARY_DIR          "D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/_deps/fmt-build"
                     CONFIGURE_COMMAND   ""

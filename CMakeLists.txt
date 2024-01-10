@@ -35,7 +35,8 @@ option(ENABLE_SANITIZE_UNDEF "Enable undefined sanitizer" ON)
 option(ENABLE_LTO "Enable LTO/IPO" ON)
 
 option(USE_CPM "Whether to use CPM" OFF)
-option(USE_CONAN "Whether to use CONAN" ON)
+option(USE_CONAN "Whether to use CONAN" OFF)
+option(USE_VCPKG "Whether to use VcPkg" ON)
 
 # define variable. all used in subdirectories cmakefiles
 set(LIBRARY_NAME "Library")
@@ -66,16 +67,30 @@ if(USE_CPM)
     message(STATUS "Using CPM")
     include(CPM)
     cpmaddpackage("gh:nlohmann/json#v3.11.2")
-    cpmaddpackage("gh:fmtlib/fmt#9.1.0")
-    cpmaddpackage("gh:gabime/spdlog#v1.11.0")
+    cpmaddpackage("gh:fmtlib/fmt#8.0.1")
+    cpmaddpackage("gh:gabime/spdlog#v1.9.2")
     cpmaddpackage("gh:jarro2783/cxxopts#v3.1.1")
     cpmaddpackage("gh:catchorg/Catch2#v2.13.9")
 elseif(USE_CONAN)   
-    message(STATUS "Using CPM")
-    # generated path by commmand 
+    message(STATUS "Using Conan")
+    # generated path by command 
     include(${CMAKE_BINARY_DIR}/conan_toolchain.cmake)
+    find_package(nlohmann_json REQUIRED)
+    find_package(fmt REQUIRED)
+    find_package(fmtd REQUIRED)
+    find_package(spdlog REQUIRED)
+    find_package(cxxopts REQUIRED)
+    find_package(Catch2 REQUIRED)
+elseif(USE_VCPKG)
+    message(STATUS "Using VCPKG")
+    include(${CMAKE_SOURCE_DIR}/external/vcpkg/scripts/buildsystems/vcpkg.cmake)
+    find_package(nlohmann_json REQUIRED)
+    find_package(fmt REQUIRED)
+    find_package(spdlog REQUIRED)
+    find_package(cxxopts REQUIRED)
+    find_package(Catch2 REQUIRED)
 else()
-    message(STATUS "Using FetchContent. not CPM")
+    message(STATUS "Using FetchContent")
     # main idea
     # - declare which github repository to use -> be cloned to build directory
     # - GIT_REPOSITORY needs to be cmake project
@@ -93,7 +108,7 @@ else()
     FetchContent_Declare(
         FMT
         GIT_REPOSITORY https://github.com/fmtlib/fmt.git
-        GIT_TAG v9.1.0
+        GIT_TAG v8.0.1
         GIT_SHALLOW TRUE
         )
 
@@ -114,7 +129,7 @@ else()
     FetchContent_Declare(
         spdlog
         GIT_REPOSITORY https://github.com/gabime/spdlog
-        GIT_TAG v1.11.0
+        GIT_TAG v1.9.2
         GIT_SHALLOW TRUE)
 
     # load library into our cmake project
