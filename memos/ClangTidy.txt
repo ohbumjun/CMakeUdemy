@@ -1,4 +1,5 @@
 >> 개념
+
 Clang Tidy 는 static linting tool 이다.
 linter 는 predefined check 와 관련되어 프로젝트 코드를 check 해준다.
 compiler warning 과 비슷한 녀석이라고 할 수 있다.
@@ -13,8 +14,24 @@ runtime 때 발생할 수 있는 것을 미리 확인하고 잡기 위해서
 활용될 수도 있다.
 
 >> 특징
+Compilation 과정 이전에 실행되는 Tool 이다.
+
 이것을 사용하기 위해서 꼭 Clang Compiler 를 사용해야만 하는 것은 아니다.
 
 >> .clang-tidy 파일이다
 Checks : 어떤에러 혹은 버그를 체크할 지 안 체크할지
 configuration 을 적어두는 항목이다.
+
+ex) cppcoreguidelines-*
+cppcoreguidelines 와 관련된 모든 사항을 체크할 것이다.
+
+단, 이 중에서 특정 사항은 체크하지 않으려면
+아래와 같이 맨 앞에 '-' 을 붙이고, 사항의 full name 을 명시한다.
+-cppcoreguidelines-avoid-non-const-global-variables
+
+>> CMake 함수 설명
+- add_clang_tidy_to_target 
+특정 target 에 clang tidy 를 실행하게 하는 것
+ex) Executable, Library 
+
+- python script 가 실행되게 된다.

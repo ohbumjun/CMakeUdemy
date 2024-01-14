@@ -13,6 +13,8 @@ int main() {
     int x[2];
     x[2] = 1337;
 
+    int* n = new int;
+
     std::cout << x << std::endl;
     return 0;
 }

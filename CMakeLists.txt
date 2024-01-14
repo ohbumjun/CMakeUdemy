@@ -21,9 +21,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED On)
 #     disable these kinds of examples 
 set(CMAKE_CXX_EXTENSIONS        OFF)
 
+# generate 'compile_commands.json' file so that clang-tidy can know
+# which files to look for
+# ex) clang-tidy is a tool that runs before compilation
+#     so it has to know where to look for all files of project
+#     based on compile_commands.json
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # can pass variable to set 'COMPILE_EXECUTABLE' value in command line
 # ex) cmake .. -DCOMPILE_EXECUTABLE=ON
 option(COMPILE_EXECUTABLE "Whether to compile the executable" ON)
+# compiler warning not off !
 option(ENABLE_WARNINGS "Enable to add warnings to a target." ON) # always should be on 
 # if single one warning occurs, compilation will fail
 option(ENABLE_WARNINGS_AS_ERRORS "Enable to treat warnings as errors." OFF)
@@ -34,9 +42,11 @@ option(ENABLE_SANITIZE_UNDEF "Enable undefined sanitizer" ON)
 
 option(ENABLE_LTO "Enable LTO/IPO" ON)
 
-option(USE_CPM "Whether to use CPM" OFF)
+option(ENABLE_CLANG_TIDY "Enable to add clang tidy." ON)
+
+option(USE_CPM "Whether to use CPM" ON)
 option(USE_CONAN "Whether to use CONAN" OFF)
-option(USE_VCPKG "Whether to use VcPkg" ON)
+option(USE_VCPKG "Whether to use VcPkg" OFF)
 
 # define variable. all used in subdirectories cmakefiles
 set(LIBRARY_NAME "Library")
@@ -45,8 +55,10 @@ set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
 
 # include cmake module files 
 # reference : already predefined cmake modules exist in my cmake version
+include(ConfigSafeGuards)
 include(AddGitSubmodule) 
 include(Docs) 
+include(Tools)
 if(ENABLE_WARNINGS)
     include(Warnings)
 endif()
@@ -59,6 +71,7 @@ if(ENABLE_SANITIZE_ADDR OR ENABLE_SANITIZE_UNDEF)
     include(Sanitizer)
     add_sanitizer_flags()
 endif()
+
 
 # build in cmake modules
 include(FetchContent)

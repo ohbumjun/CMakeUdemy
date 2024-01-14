@@ -1,5 +1,0 @@
-D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/CMakeFiles/docs.dir
-D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/CMakeFiles/ALL_BUILD.dir
-D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/CMakeFiles/ZERO_CHECK.dir
-D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/src/my_lib/CMakeFiles/Library.dir
-D:/Coding/CodingStudyStuff/gameStudy/CMakeUdemy/build/app/CMakeFiles/Executable.dir
