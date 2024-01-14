@@ -185,3 +185,20 @@ endif()
 # build type
 # - Debug : no optimization
 # - Release : high optimization
+
+# INSTALL TARGETS
+# - able to install our executable and library 
+# like any other software
+
+# - option to install executable 
+install(
+    TARGETS ${EXECUTABLE_NAME}
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin)
+
+# - option to install library
+install(
+    TARGETS ${LIBRARY_NAME}
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib)

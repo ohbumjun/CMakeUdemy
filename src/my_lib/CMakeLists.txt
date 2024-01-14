@@ -8,6 +8,8 @@ set(LIBRARY_INCLUDES
     "${CMAKE_BINARY_DIR}/configured_files/include")
 
 # create target, but not executable == library
+# STATIC : staic library    ex) .lib
+# SHARED : dynamic library  ex) .dll
 add_library(${LIBRARY_NAME} STATIC ${LIBRARY_SOURCES} ${LIBRARY_HEADERS})
 
 # where to find header files

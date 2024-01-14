@@ -1,0 +1,6 @@
+# All build
+- can see main CMakeFiles.txt 
+
+# 하나 target 선택해서 build ?
+- 말 그대로 해당 target 이랑 dependency target 만
+빌드하는 것이다.
