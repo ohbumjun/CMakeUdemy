@@ -1,0 +1,50 @@
+name: Documentation
+
+# when to execute the act defined as 'jobs'
+on:
+  push:
+    # whenever create new version or txt 
+    tags:
+      - "*"
+    #whenever pushing to master or main 
+    branches: [ main, master ]
+
+# 
+jobs:
+  build:
+    name: Build and publish documentation
+    runs-on: ubuntu-latest
+    steps:
+    # checking out the master branch 
+    - uses: actions/checkout@v2
+    # install python
+    - uses: actions/setup-python@v2
+    # install docs related packages 
+    # ex. doxygen, jinja2, Pygments
+    - name: Install Docs
+      run: |
+        sudo apt-get install doxygen
+        pip install jinja2 Pygments
+    - name: prepare
+      run: |
+        make prepare
+
+    # configure project 
+    - name: configure
+      run: |
+        cmake -H. -Bbuild -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="Debug"
+      
+    # run doxygen (not compile code)
+    - name: building
+      # call custom target where we execute doxygen command
+      run: |
+        cmake --build build --config Debug --target docs -j4
+      
+    # deploy to github pages
+    - name: Deploy to GitHub Pages
+      uses: Cecilapp/GitHub-Pages-deploy@v3
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        # result of doxygen command
+        build_dir: ./docs/html
