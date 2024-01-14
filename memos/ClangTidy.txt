@@ -1,0 +1,16 @@
+>> 개념
+Clang Tidy 는 static linting tool 이다.
+linter 는 predefined check 와 관련되어 프로젝트 코드를 check 해준다.
+compiler warning 과 비슷한 녀석이라고 할 수 있다.
+그런데 compiler warning 은 compile 을 해야만 check 된다.
+
+한편 static linter 는 항상 실행될 수 있다.
+compile 때만 실행되는 것이 아니라는 의미이다.
+run time 때도 가능하고
+compile 단계 이전에도 가능하다.
+
+runtime 때 발생할 수 있는 것을 미리 확인하고 잡기 위해서
+활용될 수도 있다.
+
+>> 특징
+이것을 사용하기 위해서 꼭 Clang Compiler 를 사용해야만 하는 것은 아니다.
