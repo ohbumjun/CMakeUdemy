@@ -3,6 +3,8 @@ if(ENABLE_TESTING)
     set(TEST_SOURCES "main.cc")
     set(TEST_INCLUDES "./")
 
+    message("Testing Configuration going option()")
+
     add_executable(${TEST_MAIN} ${TEST_SOURCES})
     target_include_directories(${TEST_MAIN} PUBLIC ${TEST_INCLUDES})
 
