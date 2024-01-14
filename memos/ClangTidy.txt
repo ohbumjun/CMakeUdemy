@@ -14,3 +14,7 @@ runtime 때 발생할 수 있는 것을 미리 확인하고 잡기 위해서
 
 >> 특징
 이것을 사용하기 위해서 꼭 Clang Compiler 를 사용해야만 하는 것은 아니다.
+
+>> .clang-tidy 파일이다
+Checks : 어떤에러 혹은 버그를 체크할 지 안 체크할지
+configuration 을 적어두는 항목이다.
