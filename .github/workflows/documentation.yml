@@ -33,6 +33,10 @@ jobs:
     - name: configure
       run: |
         cmake -H. -Bbuild -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="Debug"
+    
+    # install faraday-retry gem
+    - name: Install faraday-retry gem
+      run: gem install faraday-retry
       
     # run doxygen (not compile code)
     - name: building
