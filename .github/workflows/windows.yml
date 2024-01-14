@@ -18,12 +18,16 @@ jobs:
       run: |
         make prepare
     # so far, we made env ready
+    # 1. configure
     - name: configure
       run: |
         cmake -H"." -Bbuild -T host=x86 -A x64 -DCMAKE_BUILD_TYPE="Debug"
+    # 2. build project
     - name: building
+      # just execute the unit test
       run: |
         cmake --build build --config Debug --target unit_tests -j4
+    # 3. test 
     - name: testing
       run: |
         cd build

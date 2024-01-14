@@ -162,7 +162,7 @@ endif()
 # ex) call function in cmake module file
 #     - add_git_submodule(external/json)
 
-option(ENABLE_TESTING "Enable Unit Testing Build" OFF)
+option(ENABLE_TESTING "Enable Unit Testing Build" ON)
 
 # search for other CMakeLists.txt files in subdirectories
 add_subdirectory(src) # library
