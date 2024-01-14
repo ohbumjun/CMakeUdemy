@@ -1,5 +1,5 @@
 # whenever we genrate cmake project.
-# user has to set a build type ex) debuge, release 
+# user has to set a build type ex) debuge, release
 # if user doesn't set build type, cmake will set default build type as 'debug'
 
 if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})

@@ -22,8 +22,8 @@ function(target_set_warnings)
 
     # set 3 variables
     # MSVC compiler options
-    # ex) window based 
-    
+    # ex) window based
+
     set(MSVC_WARNINGS
         # Baseline
         /W4 # Baseline reasonable warnings
@@ -68,7 +68,7 @@ function(target_set_warnings)
         -Woverloaded-virtual # if you overload (not override) a virtual function
         -Weffc++ # violations from Scott Meyers’ Effective C++
     )
-        
+
     # GCC compiler options
     set(GCC_WARNINGS
         ${CLANG_WARNINGS}

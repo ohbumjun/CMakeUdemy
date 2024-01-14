@@ -8,18 +8,18 @@
 cmake_minimum_required(VERSION 3.22)
 
 # set the project name
-project(CPPProjectCMake 
-VERSION 
-1.0.0 
-LANGUAGES C CXX)
+project(
+    CPPProjectCMake
+    VERSION 1.0.0
+    LANGUAGES C CXX)
 
 # every target in our project set to use C++17
-set(CMAKE_CXX_STANDARD          17)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED On)
 
 # ex) some c variable not in C++ standard. but can be used in gcc
-#     disable these kinds of examples 
-set(CMAKE_CXX_EXTENSIONS        OFF)
+#     disable these kinds of examples
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 # generate 'compile_commands.json' file so that clang-tidy can know
 # which files to look for
@@ -32,7 +32,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # ex) cmake .. -DCOMPILE_EXECUTABLE=ON
 option(COMPILE_EXECUTABLE "Whether to compile the executable" ON)
 # compiler warning not off !
-option(ENABLE_WARNINGS "Enable to add warnings to a target." ON) # always should be on 
+option(ENABLE_WARNINGS "Enable to add warnings to a target." ON
+)# always should be on
 # if single one warning occurs, compilation will fail
 option(ENABLE_WARNINGS_AS_ERRORS "Enable to treat warnings as errors." OFF)
 
@@ -48,16 +49,19 @@ option(USE_CPM "Whether to use CPM" ON)
 option(USE_CONAN "Whether to use CONAN" OFF)
 option(USE_VCPKG "Whether to use VcPkg" OFF)
 
+option(ENABLE_CLANG_FORMAT "Enable to add clang-format." ON)
+option(ENABLE_CMAKE_FORMAT "Enable to add cmake-format." ON)
+
 # define variable. all used in subdirectories cmakefiles
 set(LIBRARY_NAME "Library")
 set(EXECUTABLE_NAME "Executable")
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
 
-# include cmake module files 
+# include cmake module files
 # reference : already predefined cmake modules exist in my cmake version
 include(ConfigSafeGuards)
-include(AddGitSubmodule) 
-include(Docs) 
+include(AddGitSubmodule)
+include(Docs)
 include(Tools)
 if(ENABLE_WARNINGS)
     include(Warnings)
@@ -72,6 +76,9 @@ if(ENABLE_SANITIZE_ADDR OR ENABLE_SANITIZE_UNDEF)
     add_sanitizer_flags()
 endif()
 
+# clang format, cmake format
+add_cmake_format_target()
+add_clang_format_target()
 
 # build in cmake modules
 include(FetchContent)
@@ -84,9 +91,9 @@ if(USE_CPM)
     cpmaddpackage("gh:gabime/spdlog#v1.9.2")
     cpmaddpackage("gh:jarro2783/cxxopts#v3.1.1")
     cpmaddpackage("gh:catchorg/Catch2#v2.13.9")
-elseif(USE_CONAN)   
+elseif(USE_CONAN)
     message(STATUS "Using Conan")
-    # generated path by command 
+    # generated path by command
     include(${CMAKE_BINARY_DIR}/conan_toolchain.cmake)
     find_package(nlohmann_json REQUIRED)
     find_package(fmt REQUIRED)
@@ -115,29 +122,25 @@ else()
         # which version
         GIT_TAG v3.11.2
         # would not clone recursively
-        GIT_SHALLOW TRUE
-        )
+        GIT_SHALLOW TRUE)
 
     FetchContent_Declare(
         FMT
         GIT_REPOSITORY https://github.com/fmtlib/fmt.git
         GIT_TAG v8.0.1
-        GIT_SHALLOW TRUE
-        )
+        GIT_SHALLOW TRUE)
 
     FetchContent_Declare(
         cxxopts
         GIT_REPOSITORY https://github.com/jarro2783/cxxopts.git
         GIT_TAG v3.1.1
-        GIT_SHALLOW TRUE
-    )
+        GIT_SHALLOW TRUE)
 
     FetchContent_Declare(
         Catch2
         GIT_REPOSITORY https://github.com/catchorg/Catch2
         GIT_TAG v2.13.9
-        GIT_SHALLOW TRUE
-    )
+        GIT_SHALLOW TRUE)
 
     FetchContent_Declare(
         spdlog
@@ -154,9 +157,8 @@ else()
     FetchContent_MakeAvailable(spdlog)
 endif()
 
-
 # if not cmake project ? stick to AddGitSubmodule function
-# then define own library target 
+# then define own library target
 # ex) call function in cmake module file
 #     - add_git_submodule(external/json)
 
@@ -169,13 +171,13 @@ add_subdirectory(external)
 add_subdirectory(app)
 add_subdirectory(tests) # other executable
 
-if (COMPILE_EXECUTABLE)
-else ()
+if(COMPILE_EXECUTABLE)
+
+else()
     # message when configure. not when we build
     # ex) cmake .. -> '..' means configure
     message("Without exe. compiling")
 endif()
-
 
 # which generator should be used
 # generator is the build system that cmake uses under the hood
