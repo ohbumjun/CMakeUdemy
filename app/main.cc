@@ -19,5 +19,5 @@ int main()
     int *n = new int;
 
     std::cout << x << std::endl;
-    return 0;
+    return 0; ///
 }
